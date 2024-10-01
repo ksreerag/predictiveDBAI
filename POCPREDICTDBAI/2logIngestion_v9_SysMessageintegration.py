@@ -1,3 +1,26 @@
+"""
+2logIngestion_v9_SysMessageintegration.py
+
+Description:
+This script reads logs from Azure Blob Storage, filters out relevant error logs, and inserts them into a SQL Server database.
+It supports multi-threaded log processing to ensure high performance.
+
+Key Features:
+- Filters error logs based on error codes and severity.
+- Multi-threaded log processing and batch inserts into SQL Server.
+- Connection details for Azure Storage and SQL Server must be updated in the script.
+
+Requirements:
+- Python 3.8+
+- Azure SDK for Python (azure-storage-blob)
+- pyodbc for SQL Server connection
+- Modify the azure_storage_connection_string and sql_conn_str variables.
+
+Usage:
+Run the script to ingest logs from Azure Blob Storage and insert them into the SQL database.
+    python 2logIngestion_v9_SysMessageintegration.py
+"""
+
 import getpass
 import threading
 import concurrent.futures
