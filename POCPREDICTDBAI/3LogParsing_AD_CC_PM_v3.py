@@ -1,3 +1,28 @@
+"""
+3LogParsing_AD_CC_PM_v3.py
+
+Description:
+This script performs log parsing, anomaly detection, and predictive modeling on ingested logs.
+It uses machine learning techniques such as TF-IDF and DBSCAN for feature extraction and clustering, and Prophet for forecasting future issues.
+
+Key Features:
+- Parses log messages and identifies error patterns.
+- Detects anomalies in log data using DBSCAN clustering.
+- Predicts future issues using Prophet for time-series forecasting.
+- Stores processed data and forecasts in the SQL Server database.
+
+Requirements:
+- Python 3.8+
+- SQLAlchemy for SQL Server connection
+- scikit-learn for machine learning tasks
+- Prophet for time-series forecasting
+- Modify the sql_conn_str variable for database connection.
+
+Usage:
+Run the script to parse logs, detect anomalies, and generate forecasts.
+    python 3LogParsing_AD_CC_PM_v3.py
+"""
+
 import pandas as pd
 from sklearn.cluster import DBSCAN
 from sklearn.feature_extraction.text import TfidfVectorizer
