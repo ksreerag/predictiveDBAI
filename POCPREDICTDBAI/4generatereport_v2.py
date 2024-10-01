@@ -1,3 +1,26 @@
+"""
+4generatereport_v2.py
+
+Description:
+This script generates a comprehensive text report based on the processed log data and future forecasts.
+It provides summaries of issues by server, as well as future predictions based on the results of the Prophet model.
+
+Key Features:
+- Generates server-wise issue summaries.
+- Provides detailed log entries by date and issue.
+- Produces a forecast summary with predicted future log issues.
+- Outputs a text report for end-user consumption.
+
+Requirements:
+- Python 3.8+
+- SQLAlchemy for SQL Server connection
+- Modify the sql_conn_str variable for database connection.
+
+Usage:
+Run the script to generate a report based on log data and forecasts.
+    python 4generatereport_v2.py
+"""
+
 import pandas as pd
 from sqlalchemy import create_engine, text
 import urllib
