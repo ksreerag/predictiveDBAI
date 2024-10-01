@@ -1,3 +1,24 @@
+"""
+1LogCollector_v1.py
+
+Description:
+This script uploads log files from a specified local directory to an Azure Blob Storage container.
+It uses multi-threading to process multiple file uploads in parallel.
+
+Key Features:
+- Configurable log directory and Azure Storage connection settings.
+- Multi-threaded uploads to speed up the process.
+
+Requirements:
+- Python 3.8+
+- Azure SDK for Python (azure-storage-blob)
+- Modify the azure_storage_connection_string, logs_directory, and container_name variables.
+
+Usage:
+Run the script to upload logs from the specified directory to Azure Blob Storage.
+    python 1LogCollector_v1.py
+"""
+
 import os
 from concurrent.futures import ThreadPoolExecutor
 from azure.storage.blob import BlobServiceClient, ContentSettings
